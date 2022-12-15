@@ -1,4 +1,4 @@
-module github.com/rs-uriel/cerealmessages
+module github.com/rs-uriel/message
 
 go 1.18
 

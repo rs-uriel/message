@@ -7,7 +7,7 @@ tmp_dir = "tmp"
 
 [build]
 # Just plain old shell command. You could use `make` as well.
-cmd = "go build -o ./tmp/main github.com/retentionscience/pdm/cmd/worker"
+cmd = "go build -o ./tmp/main github.com/rs-uriel/message/cmd"
 # Binary file yields from `cmd`.
 bin = "tmp/main"
 # Customize binary, can setup environment variables when run your app.
@@ -17,7 +17,7 @@ include_ext = ["go", "tpl", "tmpl", "yaml", "yml"]
 # Ignore these filename extensions or directories.
 exclude_dir = []
 # Watch these directories if you specified.
-include_dir = ["config", "internal", "pkg/worker"]
+include_dir = ["config", "internal", "pkg/server"]
 # Watch these files.
 include_file = []
 # Exclude files.
@@ -39,7 +39,7 @@ send_interrupt = false
 # Delay after sending Interrupt signal
 kill_delay = 500 # ms
 # Add additional arguments when running binary (bin/full_bin). Will run './tmp/main hello world'.
-args_bin = ["--config", "./config/worker/config.yml", "-k", "local"]
+#args_bin = ["--config", "./config/message/config.yml", "-k", "local"]
 
 [log]
 # Show log time

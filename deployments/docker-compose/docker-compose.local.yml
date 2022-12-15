@@ -1,8 +1,8 @@
 version: '3'
 services:
-  worker:
+  server:
     build:
       context: ../../
-      dockerfile: build/worker/Dockerfile.local
+      dockerfile: build/server/Dockerfile.local
     volumes:
       - ../../:/go/bin/message:cached
