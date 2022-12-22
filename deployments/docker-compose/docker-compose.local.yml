@@ -1,8 +1,19 @@
 version: '3'
+
+networks:
+    backend:
+        driver: bridge
+
 services:
   server:
     build:
       context: ../../
       dockerfile: build/server/Dockerfile.local
+    ports:
+      - 5005:5005
+    expose:
+      - 5005
+    networks:
+      - backend
     volumes:
       - ../../:/go/bin/message:cached
